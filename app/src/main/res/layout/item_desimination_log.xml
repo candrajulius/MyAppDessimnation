@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="match_parent">
+        
+        
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/on_the_day"
+            android:textSize="12sp"
+            android:id="@+id/on_the_day"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="5dp"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:id="@+id/value_on_the_day"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/on_the_day"
+            app:layout_constraintBottom_toBottomOf="@id/on_the_day"
+            app:layout_constraintStart_toEndOf="@id/on_the_day"
+            android:text="@string/on_the_day"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_desimination"
+            android:textSize="12sp"
+            android:id="@+id/status_desimination"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="@id/on_the_day"
+            app:layout_constraintTop_toBottomOf="@id/value_on_the_day"
+            android:layout_marginTop="10dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="5dp"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:id="@+id/value_status_desimination"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/status_desimination"
+            app:layout_constraintStart_toStartOf="@id/value_on_the_day"
+            android:text="@string/on_the_day"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/by_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/by_name"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/status_desimination"
+            app:layout_constraintTop_toBottomOf="@id/value_status_desimination" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_by_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/on_the_day"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/value_status_desimination"
+            app:layout_constraintTop_toTopOf="@id/by_name" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/note"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/note"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/by_name"
+            app:layout_constraintTop_toBottomOf="@id/value_by_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_note"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/on_the_day"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/value_by_name"
+            app:layout_constraintStart_toStartOf="@id/value_by_name"
+            app:layout_constraintTop_toTopOf="@+id/note" />
+        
+        
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

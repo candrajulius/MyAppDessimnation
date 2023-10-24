@@ -1,0 +1,6 @@
+package com.candra.mydesiminationapp.data.source.remote.response.admin.list_class_dissemination_administrator
+
+
+import com.google.gson.annotations.SerializedName
+
+class ResponseListResearchDisseminationAdministrator : ArrayList<ResponseListResearchDisseminationAdministratorItem>()

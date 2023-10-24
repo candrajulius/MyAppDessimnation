@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "940929437516",
+    "project_id": "projectdesimination",
+    "storage_bucket": "projectdesimination.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940929437516:android:d60fb9594395440454c9e9",
+        "android_client_info": {
+          "package_name": "com.candra.mydesiminationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940929437516-ij1ogi9qoj4rpqap79e7p77i18nfpla5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.candra.mydesiminationapp",
+            "certificate_hash": "51a1ea94d453fa68be87018eb91bd01e622cb201"
+          }
+        },
+        {
+          "client_id": "940929437516-r4bb461b1sfneec70e1e83njgqtcq6k5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNIP7nvD7jRKZXn1FSTzh4HgUp31P-WCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940929437516-r4bb461b1sfneec70e1e83njgqtcq6k5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

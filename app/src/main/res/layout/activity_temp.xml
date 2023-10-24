@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TempActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/login_as_lecturer"
+        android:textSize="15sp"
+        android:id="@+id/btn_login_as_lecturer"
+        android:backgroundTint="@color/color_btn_login"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:cornerRadius="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/color_btn_login"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_as_lecturer"
+        app:layout_constraintEnd_toEndOf="@id/btn_login_as_lecturer"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_login_as_student"
+        app:layout_constraintStart_toStartOf="@id/btn_login_as_lecturer"
+        android:text="@string/login_as_student"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:cornerRadius="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/color_btn_login"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_as_student"
+        app:layout_constraintEnd_toEndOf="@id/btn_login_as_student"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_login_as_administrator"
+        app:layout_constraintStart_toStartOf="@id/btn_login_as_student"
+        android:text="@string/login_as_administrator"
+        android:textStyle="bold" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="login_text_input">#F5F5F5</color>
+    <color name="color_btn_login">#006DCC</color>
+    <color name="color_btn_action">#E6E6E6</color>
+    <color name="background_dialog">#F3F3F3</color>
+    <color name="btn_change_status">#F6F204</color>
+    <color name="btn_change_status_to_draft_registration">#FAA732</color>
+    <color name="btn_blank_form">#DA4F49</color>
+    <color name="background_card">#E3E3E3</color>
+
+</resources>

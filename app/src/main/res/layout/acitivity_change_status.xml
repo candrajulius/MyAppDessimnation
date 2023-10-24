@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/card_note"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/background_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="@string/note"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/title_note"
+                        android:textStyle="bold"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@android:color/black" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        android:background="@color/background_dialog"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="@string/note"
+                        app:layout_constraintTop_toBottomOf="@+id/title_note"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/til_note"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:maxLines="10"
+                            android:gravity="top"
+                            android:id="@+id/edt_note" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/til_note"
+                        android:text="@string/text_status_desimination"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/til_note"
+                        android:textColor="@android:color/black"
+                        android:id="@+id/status"/>
+
+                    <RadioGroup
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/rg_choise_status"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/status"
+                        app:layout_constraintTop_toBottomOf="@id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rb_register_submitted"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/register_submitted_to_study_program"/>
+
+                        <RadioButton
+                            android:id="@+id/rb_reject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="@string/register_rejected_from_lecturer"/>
+
+                    </RadioGroup>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/color_btn_login"
+                        android:text="@string/save"
+                        app:cornerRadius="8dp"
+                        android:id="@+id/btn_save"
+                        app:layout_constraintEnd_toEndOf="@id/rg_choise_status"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@id/rg_choise_status"
+                        app:layout_constraintTop_toBottomOf="@id/rg_choise_status" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="@id/btn_save"
+                        app:layout_constraintBottom_toBottomOf="@id/btn_save"
+                        android:layout_marginBottom="5dp"
+                        app:layout_constraintStart_toEndOf="@id/btn_save"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/back"
+                        android:textStyle="bold"
+                        app:cornerRadius="8dp"
+                        android:id="@+id/btn_back"
+                        android:textSize="12sp"
+                        android:drawableLeft="@drawable/baseline_arrow_back_24"
+                        android:textColor="@android:color/black"
+                        android:backgroundTint="@android:color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/research_desimination"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/card_note"
+                app:layout_constraintStart_toStartOf="@id/card_note"
+                android:id="@+id/title_research_desimination" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/id_desimination_research"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@android:color/black"
+                        android:text="@string/id_desimination_research"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_id_desimination"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/id_desimination_research"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/id_desimination_research"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/id_desimination_research"
+                        app:layout_constraintTop_toTopOf="@id/id_desimination_research" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/status_desimination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/text_status_desimination"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/id_desimination_research"
+                        app:layout_constraintTop_toBottomOf="@id/value_id_desimination" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_status_desimination"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/text_status_desimination"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/status_desimination"
+                        app:layout_constraintTop_toTopOf="@id/status_desimination" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tittle_desimination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_title_desimination"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/status_desimination"
+                        app:layout_constraintTop_toBottomOf="@id/value_status_desimination" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_tittle_desimination"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/text_title_desimination"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@id/value_status_desimination"
+                        app:layout_constraintStart_toEndOf="@+id/tittle_desimination"
+                        app:layout_constraintTop_toTopOf="@+id/tittle_desimination" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/abstact"
+                        android:text="@string/abstrak"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_tittle_desimination"
+                        app:layout_constraintStart_toStartOf="@id/tittle_desimination"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_abstract"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/abstrak"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/abstact"
+                        app:layout_constraintTop_toTopOf="@id/abstact" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/keyword"
+                        android:text="@string/keyword"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_abstract"
+                        app:layout_constraintStart_toStartOf="@id/abstact"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_keyword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/keyword"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/keyword"
+                        app:layout_constraintTop_toTopOf="@id/keyword" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/lecturer"
+                        android:text="@string/lecturer"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_keyword"
+                        app:layout_constraintStart_toStartOf="@id/keyword"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_lecturer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/keyword"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/lecturer"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/lecturer"
+                        app:layout_constraintTop_toTopOf="@id/lecturer" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/determination_decision"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/determination_decision"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/lecturer"
+                        app:layout_constraintTop_toBottomOf="@+id/value_lecturer" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_determination_decision"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="9dp"
+                        android:text="@string/keyword"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/determination_decision"
+                        app:layout_constraintTop_toTopOf="@id/determination_decision" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/journal"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/card_note"
+                app:layout_constraintStart_toStartOf="@id/card_note"
+                android:id="@+id/journal" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/category_journal"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@android:color/black"
+                        android:text="@string/category_journal"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_category_journal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/category_journal"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/category_journal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/category_journal"
+                        app:layout_constraintTop_toTopOf="@id/category_journal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/name_journal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/name_journal"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/category_journal"
+                        app:layout_constraintTop_toBottomOf="@id/value_category_journal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_name_journal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/name_journal"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_category_journal"
+                        app:layout_constraintTop_toTopOf="@id/name_journal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/number_issn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_issn"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/name_journal"
+                        app:layout_constraintTop_toBottomOf="@id/value_name_journal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_issn"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:id="@+id/value_number_issn"
+                        app:layout_constraintEnd_toEndOf="@id/value_name_journal"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@id/value_name_journal"
+                        app:layout_constraintTop_toTopOf="@+id/number_issn" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/page_publisher"
+                        android:text="@string/page_publisher"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_number_issn"
+                        app:layout_constraintStart_toStartOf="@id/number_issn"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_page_publisher"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/page_publisher"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_number_issn"
+                        app:layout_constraintTop_toTopOf="@id/page_publisher" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/page_article"
+                        android:text="@string/page_article"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_page_publisher"
+                        app:layout_constraintStart_toStartOf="@id/page_publisher"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_page_article"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/page_article"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_page_publisher"
+                        app:layout_constraintTop_toTopOf="@id/page_article" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/year_journal"
+                        android:text="@string/year_journal"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_page_article"
+                        app:layout_constraintStart_toStartOf="@id/page_article"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_year_journal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/year_journal"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_page_article"
+                        app:layout_constraintTop_toTopOf="@id/year_journal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/volume_journal"
+                        android:text="@string/volume_journal"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_year_journal"
+                        app:layout_constraintStart_toStartOf="@id/year_journal"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_volume_journal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/volume_journal"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_year_journal"
+                        app:layout_constraintTop_toTopOf="@id/volume_journal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/number_journal"
+                        android:text="@string/number_journal"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_volume_journal"
+                        app:layout_constraintStart_toStartOf="@id/volume_journal"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_number_journal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/number_journal"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/number_journal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_volume_journal"
+                        app:layout_constraintTop_toTopOf="@id/number_journal" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/research_document"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/card_note"
+                app:layout_constraintStart_toStartOf="@id/card_note"
+                android:id="@+id/research_document" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/research_desimination"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@android:color/black"
+                        android:text="@string/research_desimination"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_research_desimination"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/category_journal"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/research_desimination"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/research_desimination"
+                        app:layout_constraintTop_toTopOf="@id/research_desimination" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/article"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/name_journal"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/research_desimination"
+                        app:layout_constraintTop_toBottomOf="@id/value_research_desimination" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_article"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/name_journal"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_research_desimination"
+                        app:layout_constraintTop_toTopOf="@id/article" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/material_presentation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/presentation_materials"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/article"
+                        app:layout_constraintTop_toBottomOf="@id/value_article" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_issn"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:id="@+id/value_material_presentation"
+                        app:layout_constraintEnd_toEndOf="@id/value_article"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@id/value_article"
+                        app:layout_constraintTop_toTopOf="@+id/material_presentation" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/free_admin"
+                        android:text="@string/free_admin"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_material_presentation"
+                        app:layout_constraintStart_toStartOf="@id/material_presentation"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_free_admin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/page_publisher"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_material_presentation"
+                        app:layout_constraintTop_toTopOf="@id/free_admin" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/team_research"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/card_note"
+                app:layout_constraintStart_toStartOf="@id/card_note"
+                android:id="@+id/team_research" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/rv_team_research"
+                        tools:listitem="@layout/item_members"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/schedule_dessimination"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/card_note"
+                app:layout_constraintStart_toStartOf="@id/card_note"
+                android:id="@+id/schedule_dessimination" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardElevation="5dp"
+                android:id="@+id/card_schedule_dissemination"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="8dp"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/class_room"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textColor="@android:color/black"
+                        android:text="Ruangan"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_class_room"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="43"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/class_room"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/class_room"
+                        app:layout_constraintTop_toTopOf="@id/class_room" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Waktu Mulai Desminasi"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/class_room"
+                        app:layout_constraintTop_toBottomOf="@id/value_class_room" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_start_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="Jumat, 12 April 2019 14:00:00"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/start_time"
+                        app:layout_constraintTop_toTopOf="@id/start_time" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Waktu Selesai Diseminasi"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintStart_toStartOf="@id/start_time"
+                        app:layout_constraintTop_toBottomOf="@id/value_start_time" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Jumat, 12 April 2019 14:00:00"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:id="@+id/value_end_time"
+                        app:layout_constraintEnd_toEndOf="@id/value_start_time"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/end_time"
+                        app:layout_constraintTop_toTopOf="@+id/end_time" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:id="@+id/quota_participants"
+                        android:text="Kuota Peserta"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toBottomOf="@id/value_end_time"
+                        app:layout_constraintStart_toStartOf="@id/end_time"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/value_quota_participants"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="30/30"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/value_end_time"
+                        app:layout_constraintTop_toTopOf="@id/quota_participants" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

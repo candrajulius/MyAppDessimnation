@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="ID"
+            android:id="@+id/id_desimination"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_id_desimination"
+            android:layout_width="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:text="#1024"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/id_desimination"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/id_desimination"
+            app:layout_constraintTop_toTopOf="@+id/id_desimination"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:id="@+id/title_desimination"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_title_desimination"
+            app:layout_constraintTop_toBottomOf="@id/id_desimination"
+            app:layout_constraintStart_toStartOf="@id/id_desimination"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_title_desimination"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            android:text="dsafadfd"
+            android:maxLines="2"
+            android:textSize="12sp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/title_desimination"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/value_id_desimination"
+            app:layout_constraintTop_toTopOf="@+id/title_desimination"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leader_desimination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_leader_desimination"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/title_desimination"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/title_desimination"
+            app:layout_constraintTop_toBottomOf="@+id/value_title_desimination" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_leader_desimination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/leader_dummy"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/leader_desimination"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/value_title_desimination"
+            app:layout_constraintTop_toBottomOf="@+id/value_title_desimination" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/status_desimination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_status_desimination"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/leader_desimination"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/leader_desimination"
+            app:layout_constraintTop_toBottomOf="@id/leader_desimination" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_status_desimination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/leader_dummy"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/status_desimination"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/value_leader_desimination"
+            app:layout_constraintTop_toTopOf="@id/status_desimination" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_action_desimination"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/color_btn_action"
+            android:drawableLeft="@drawable/baseline_folder_24"
+            android:text="@string/action"
+            android:textColor="@android:color/black"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/value_status_desimination"
+            app:layout_constraintTop_toBottomOf="@id/value_status_desimination"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

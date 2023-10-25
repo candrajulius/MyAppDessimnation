@@ -5,9 +5,9 @@ Disseminasi adalah sebuah aplikasi yang digunakan untuk mahasiswa untuk mentrack
 
 ## Design Aplikasi Disseminasi
 ### User Interface Untuk Mahasiswa
-|Splash Screen|Index Disseminasi|Tambah Anggota|Koreksi Anggota|Ubah Status Disseminasi|
-|--|--|--|--|--|
-| <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/splash_screen.jpeg" width="200"></p> |<p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/index_disseminasi_kepala_peneliti.jpeg" width="200"></p> | <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/ajukan_anggota.jpeg" width="200"></p> | <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/koreksi_anggota.jpeg" width="200"></p> | <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/ubah_catatan_disseminasi.jpeg" width="200"></p>|
+|Splash Screen| Pilihan Login | Login Mahasiswa | Index Disseminasi | Tambah Anggota | Koreksi Anggota | Ubah Status Disseminasi |
+|--|--|--|--|--|--|--|
+| <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/splash_screen.jpeg" width="200"></p> |<p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/pilihan_login.jpeg" width="200"></p> | <p><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/login_mahasiswa.jpeg" width="200"></p>| <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/index_disseminasi_kepala_peneliti.jpeg" width="200"></p> | <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/ajukan_anggota.jpeg" width="200"></p> | <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/koreksi_anggota.jpeg" width="200"></p> | <p align="center"><img src="https://raw.githubusercontent.com/candrajulius/MyAppDessimnation/master/ubah_catatan_disseminasi.jpeg" width="200"></p>|
 
 ## Fitur Aplikasi
 - **Tambah Anggota Disseminasi**

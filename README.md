@@ -13,7 +13,7 @@ Disseminasi adalah sebuah aplikasi yang digunakan untuk mahasiswa untuk mentrack
 - **Tambah Anggota Disseminasi**
 - **Ubah Status Disseminasi**
 - **Koreksi Anggota Disseminasi**
-- **Catatn Disseminasi**
+- **Catatan Disseminasi**
 - **Tambah Disseminasi Oleh Dosen**
 - **Cek Status Disseminasi Oleh Dosen**
 - **Menerima Anggota Disseminasi Oleh Mahasiswa**
